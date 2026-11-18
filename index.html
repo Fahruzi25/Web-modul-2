@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuryaLog Cloud — Rooftop Solar Monitoring</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1>☀️ SuryaLog Cloud</h1>
+      <span class="badge">Module 2 — Containerized Stack</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="metrics-grid">
+      <div class="card">
+        <h3>Total Energy Generation</h3>
+        <p class="metric-value" id="total-kwh">-- kWh</p>
+      </div>
+      <div class="card">
+        <h3>Active Solar Plants</h3>
+        <p class="metric-value" id="plants-count">--</p>
+      </div>
+      <div class="card">
+        <h3>Mean Irradiance</h3>
+        <p class="metric-value" id="mean-irradiance">-- W/m²</p>
+      </div>
+      <div class="card">
+        <h3>Peak Solar Hour</h3>
+        <p class="metric-value" id="peak-hour">--:00</p>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h2>Recent Plant Readings (Database Seed)</h2>
+        <button id="refresh-btn">Refresh Data</button>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Plant ID</th>
+            <th>Hour</th>
+            <th>Timestamp</th>
+            <th>Energy (kWh)</th>
+            <th>Irradiance</th>
+          </tr>
+        </thead>
+        <tbody id="readings-body">
+          <tr><td colspan="5" class="loading">Loading readings from API...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>SuryaLog Cloud &copy; 2026 — S1 Informatika Cloud Computing Practicum</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
