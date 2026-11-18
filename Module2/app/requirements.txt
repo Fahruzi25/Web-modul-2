@@ -1,0 +1,4 @@
+# Pinned dependencies for Module 2 app services
+psycopg[binary]==3.1.18
+redis==5.0.3
+requests==2.31.0
